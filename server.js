@@ -9,7 +9,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 const db = client.db('Schoolclasses');
 const collectionSubject = db.collection("subjects");
 var data;
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 // logger middleware
 app.use(function (req, res, next) {
